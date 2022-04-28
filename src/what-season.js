@@ -17,7 +17,7 @@ const SEASONS = ["winter", "winter", "spring", "spring", "spring", "summer", "su
 function getSeason(date) {
   if (!date) return "Unable to determine the time of year!";
 
-  // если массив не пустой, или если поступающие значение не дата - ошибка
+  // если массив не пустой, или если поступающие значение не дата - вернуть название месяца
   if (Object.getOwnPropertyNames(date).length > 0 || !(date instanceof Date))
     throw Error("Invalid date!");
   return SEASONS[date.getMonth()];
